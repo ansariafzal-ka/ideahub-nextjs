@@ -69,7 +69,7 @@ const Home = () => {
     <main className="w-full px-6">
       <section className="w-full flex flex-col justify-center items-center gap-4 text-center mt-16">
         <h1 className="text-3xl md:text-4xl sm:w-[500px] md:w-[600px] font-bold">
-          Keep your awesome ideas safe and organized
+          Find awesome ideas shared by the community
         </h1>
         <p className="text-gray-500">
           Get started by creating your very first idea!
