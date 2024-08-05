@@ -54,6 +54,10 @@ const Form = ({
         tag,
       });
       router.push("/");
+      toast({
+        title: "Idea saved successfully",
+        description: "your idea has been created.",
+      });
     } catch (error) {
       console.log(error);
     }
@@ -69,6 +73,10 @@ const Form = ({
         tag,
       });
       router.push("/");
+      toast({
+        title: "Idea saved successfully",
+        description: "your idea has been edited.",
+      });
     } catch (error) {
       console.log(error);
     }
@@ -124,19 +132,7 @@ const Form = ({
           onChange={(e) => setTag(e.target.value)}
         />
         <div className="mt-2 flex flex-row gap-3">
-          <Button
-            type="submit"
-            onClick={() => {
-              toast({
-                title: "Idea saved successfully",
-                description: `your idea has been ${
-                  type === "Create" ? "created!" : "edited!"
-                }`,
-              });
-            }}
-          >
-            {type}
-          </Button>
+          <Button type="submit">{type}</Button>
           <Link href="/">
             <Button type="button" variant={"outline"}>
               Cancel
