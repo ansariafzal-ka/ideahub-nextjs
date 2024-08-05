@@ -47,7 +47,7 @@ const Form = ({
   const handleCreate = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post("/api/v1/idea", {
+      await axios.post("/api/v1/idea", {
         title,
         description,
         category,
@@ -66,7 +66,7 @@ const Form = ({
   const handleEdit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.put(`/api/v1/idea/${id}`, {
+      await axios.put(`/api/v1/idea/${id}`, {
         title,
         description,
         category,

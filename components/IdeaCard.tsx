@@ -26,8 +26,7 @@ const IdeaCard = ({
     const hasConfirmed = confirm("Are you sure you want to delete this idea?");
     try {
       if (hasConfirmed) {
-        const response = await axios.delete(`/api/v1/idea/${id}`);
-        console.log(response.data);
+        await axios.delete(`/api/v1/idea/${id}`);
         onDelete(id);
       }
     } catch (error) {
